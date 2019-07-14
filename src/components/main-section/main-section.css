@@ -1,0 +1,19 @@
+.main-section-wrapper {
+    margin-top: 150px;
+    margin-left: 85px;
+    display: flex;
+    align-items: center;
+}
+
+.image-circle {
+    width: 111px;
+    height: 111px;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: 40px;
+}
+
+.baseline-img {
+    width: 111px;
+}
