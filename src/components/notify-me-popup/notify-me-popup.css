@@ -7,11 +7,12 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    background-color: rgba(0,0,0, 0.5);
+    background-color: rgba(29,29,29,0.9065);
     z-index: 20;
 }
 
 .notify-me-inner {
+    opacity: 1;
     width: 499px;
     display: flex;
     flex-direction: column;
