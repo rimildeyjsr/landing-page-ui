@@ -9,9 +9,9 @@ export class SectionTwo extends Component {
           We’re building an amazing new gaming experience for you.
         </h2>
 
-        <div className='notify-me-button'>
+        <button className='notify-me-button' onClick={this.props.showLightBox}>
           NOTIFY ME
-        </div>
+        </button>
       </div>
     )
   }
