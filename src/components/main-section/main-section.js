@@ -14,7 +14,7 @@ export class MainSection extends Component {
           return (
             <div id="fullpage-wrapper">
               <div className='section'>
-                <div className='main-section-wrapper '>
+                <div className='section-1-wrapper'>
                   <div>
                     <FirstLetterCustomHeadingElement text="Let's"/>
                     <FirstLetterCustomHeadingElement text="Make" leftMargin="105px"/>
@@ -24,6 +24,18 @@ export class MainSection extends Component {
 
                   <div className='image-circle'>
                     <img src={baselineExpand} alt="baseline expand image" className='baseline-img'/>
+                  </div>
+                </div>
+              </div>
+
+              <div className='section'>
+                <div className='section-2-wrapper'>
+                  <h2 className='section-2-heading'>
+                    We’re building an amazing new gaming experience for you.
+                  </h2>
+
+                  <div className='notify-me-button'>
+                    NOTIFY ME
                   </div>
                 </div>
               </div>

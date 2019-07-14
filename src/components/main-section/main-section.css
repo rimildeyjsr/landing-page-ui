@@ -1,4 +1,4 @@
-.main-section-wrapper {
+.section-1-wrapper {
     margin-left: 85px;
     display: flex;
     align-items: center;
@@ -15,4 +15,31 @@
 
 .baseline-img {
     width: 111px;
+}
+
+.section-2-heading {
+    font-family: 'Playfair Display', serif;
+    color: #868383;
+    letter-spacing: 3px;
+    font-size: 95px;
+    width: 60%;
+    margin: 0 auto 0 90px;
+}
+
+.notify-me-button {
+    margin-left: auto;
+    margin-right: 150px;
+    background-color: white;
+    border: 1px solid #979797;
+    width: 345px;
+    height: 80px;
+    border-radius: 54px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 3.26px;
+    color: #272727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
