@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import ReactDOM from "react-dom";
 import './main-section.css';
-import FirstLetterCustomHeadingElement from "../first-letter-custom-heading-element/first-letter-custom-heading-element";
-import baselineExpand from '../../images/baseline_expand.png';
 import ReactFullpage from "@fullpage/react-fullpage";
+import SectionOne from "../section-one/section-one";
+import SectionTwo from "../section-two/section-two";
 
 export class MainSection extends Component {
   render() {
@@ -14,30 +14,11 @@ export class MainSection extends Component {
           return (
             <div id="fullpage-wrapper">
               <div className='section'>
-                <div className='section-1-wrapper'>
-                  <div>
-                    <FirstLetterCustomHeadingElement text="Let's"/>
-                    <FirstLetterCustomHeadingElement text="Make" leftMargin="105px"/>
-                    <FirstLetterCustomHeadingElement text="This" leftMargin="-2px"/>
-                    <FirstLetterCustomHeadingElement text="Happen" leftMargin="60px"/>
-                  </div>
-
-                  <div className='image-circle'>
-                    <img src={baselineExpand} alt="baseline expand image" className='baseline-img'/>
-                  </div>
-                </div>
+                <SectionOne/>
               </div>
 
               <div className='section'>
-                <div className='section-2-wrapper'>
-                  <h2 className='section-2-heading'>
-                    We’re building an amazing new gaming experience for you.
-                  </h2>
-
-                  <div className='notify-me-button'>
-                    NOTIFY ME
-                  </div>
-                </div>
+                <SectionTwo/>
               </div>
             </div>
           );
