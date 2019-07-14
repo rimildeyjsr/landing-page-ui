@@ -1,0 +1,19 @@
+.heading-text {
+    font-family: 'Montserrat', sans-serif;
+    color: #595858;
+    font-size: 160px;
+    letter-spacing: -0.23px;
+    font-style: italic;
+    font-weight: 900;
+    margin: -68px 0 0;
+}
+
+.heading-text::first-letter {
+    color: white;
+}
+
+/*fall back for old browsers using CSS2*/
+.heading-text:first-letter {
+    color: white;
+}
+
