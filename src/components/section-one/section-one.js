@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import "./section-one.css";
 import FirstLetterCustomHeadingElement
   from "../first-letter-custom-heading-element/first-letter-custom-heading-element";
-import baselineExpand from "../../images/baseline_expand.png";
+import baselineExpand from "../../images/baseline-expand.svg";
 
 export class SectionOne extends Component {
   render() {
