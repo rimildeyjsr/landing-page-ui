@@ -1,11 +1,11 @@
 .heading-text {
     font-family: 'Montserrat', sans-serif;
     color: #595858;
-    font-size: 160px;
+    font-size: 180px;
     letter-spacing: -0.23px;
     font-style: italic;
     font-weight: 900;
-    margin: -68px 0 0;
+    margin: -75px 0 0;
 }
 
 .heading-text::first-letter {

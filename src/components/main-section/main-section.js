@@ -5,6 +5,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import SectionOne from "../section-one/section-one";
 import SectionTwo from "../section-two/section-two";
 import NotifyMePopup from "../notify-me-popup/notify-me-popup";
+import MovingBackgroundText from "../moving-background-text/moving-background-text";
 
 export class MainSection extends Component {
 
@@ -29,13 +30,19 @@ export class MainSection extends Component {
           return (
             <div id="fullpage-wrapper">
               <div className='section'>
-                <SectionOne/>
+                <div className='section-wrapper'>
+                  <SectionOne/>
+                  <MovingBackgroundText/>
+                </div>
               </div>
 
               <div className='section'>
-                <SectionTwo
-                  showLightBox={this.toggleLightBoxDisplay.bind(this)}
-                />
+                <div className='section-wrapper'>
+                  <SectionTwo
+                    showLightBox={this.toggleLightBoxDisplay.bind(this)}
+                  />
+                  <MovingBackgroundText/>
+                </div>
                 {
                   this.state.showNotifyMePopup ?
                     <NotifyMePopup
