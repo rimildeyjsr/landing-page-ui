@@ -26,13 +26,21 @@ export class MainSection extends Component {
     return(
       <ReactFullpage
         sectionsColor={["#272727", "#272727"]}
-        render={() => {
+        fixedElements={['.contact-div']}
+        render={({state, fullpageApi}) => {
           return (
             <div id="fullpage-wrapper">
               <div className='section'>
                 <div className='section-wrapper'>
-                  <SectionOne/>
+                  <SectionOne
+                    moveToNextSection={() => fullpageApi.moveSectionDown()}
+                  />
                   <MovingBackgroundText/>
+                  <div className='contact-div'>
+                    <a href="mailTo:leavethemails@gmail.com">
+                      Contact
+                    </a>
+                  </div>
                 </div>
               </div>
 

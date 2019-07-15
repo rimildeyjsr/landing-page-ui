@@ -35,7 +35,6 @@ export class NotifyMePopup extends Component {
           <img
             onClick={this.props.closeLightBox}
             src={crossButton}
-            alt='Cross button image'
             className='cross-button'
           />
 

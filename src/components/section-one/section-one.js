@@ -3,7 +3,6 @@ import "./section-one.css";
 import FirstLetterCustomHeadingElement
   from "../first-letter-custom-heading-element/first-letter-custom-heading-element";
 import baselineExpand from "../../images/baseline_expand.png";
-import MovingBackgroundText from "../moving-background-text/moving-background-text";
 
 export class SectionOne extends Component {
   render() {
@@ -17,7 +16,7 @@ export class SectionOne extends Component {
             <FirstLetterCustomHeadingElement text="Happen" leftMargin="50px"/>
           </div>
 
-          <div className='image-circle'>
+          <div className='image-circle' onClick={this.props.moveToNextSection}>
             <img src={baselineExpand} alt="baseline expand image" className='baseline-img'/>
           </div>
         </div>
