@@ -7,11 +7,12 @@ import { withStyles, createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import grey from '@material-ui/core/colors/grey';
 import emailIcon from "../../images/baseline-email.svg";
+import accountIcon from "../../images/baseline-account_circle.svg";
 
 const useStyles = theme => ({
   textField: {
     width: 328,
-    marginBottom: 107,
+    marginBottom: 16,
   },
 });
 
@@ -42,6 +43,22 @@ export class NotifyMePopup extends Component {
 
           <ThemeProvider theme={theme}>
             <TextField
+              id="name"
+              label="Name"
+              className={classes.textField}
+              variant="outlined"
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <img src={accountIcon} />
+                  </InputAdornment>
+                ),
+              }}
+            />
+          </ThemeProvider>
+
+          <ThemeProvider theme={theme}>
+            <TextField
               id="email-msg"
               label="Email"
               className={classes.textField}
@@ -55,6 +72,11 @@ export class NotifyMePopup extends Component {
               }}
             />
           </ThemeProvider>
+
+          <div className='disclaimer-text'>
+            We promise not to spam you! <br/>
+            We will only send out an email once we are ready for launch.
+          </div>
 
           <button className='submit-button'>
             SUBMIT
