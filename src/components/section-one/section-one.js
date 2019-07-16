@@ -9,14 +9,14 @@ export class SectionOne extends Component {
     return (
       <div className='section-1-wrapper'>
         <div className='section-1-inner'>
-          <div className='heading-container'>
+          <div className='heading-container fadeInUp25 animated'>
             <FirstLetterCustomHeadingElement text="Let's"/>
             <FirstLetterCustomHeadingElement text="Make" leftMargin="100px"/>
             <FirstLetterCustomHeadingElement text="This" leftMargin="-22px"/>
             <FirstLetterCustomHeadingElement text="Happen" leftMargin="50px"/>
           </div>
 
-          <div className='image-circle' onClick={this.props.moveToNextSection}>
+          <div className='image-circle fadeInUp60 animated' onClick={this.props.moveToNextSection}>
             <img src={baselineExpand} alt="baseline expand image" className='baseline-img'/>
           </div>
         </div>

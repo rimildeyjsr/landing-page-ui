@@ -13,6 +13,7 @@ export class MainSection extends Component {
     super(props);
     this.state = {
       showNotifyMePopup: false,
+      sectionTwoLoaded: false,
     }
   }
 
@@ -27,6 +28,15 @@ export class MainSection extends Component {
       <ReactFullpage
         sectionsColor={["#272727", "#272727"]}
         fixedElements={['.contact-div']}
+        afterLoad = {(origin, destination, direction) => {
+          if(destination.index === 1) {
+            this.setState({
+              sectionTwoLoaded: true
+            })
+          }
+        }
+
+        }
         render={({state, fullpageApi}) => {
           return (
             <div id="fullpage-wrapper">
@@ -48,6 +58,7 @@ export class MainSection extends Component {
                 <div className='section-wrapper'>
                   <SectionTwo
                     showLightBox={this.toggleLightBoxDisplay.bind(this)}
+                    sectionTwoLoaded={this.state.sectionTwoLoaded}
                   />
                   <MovingBackgroundText/>
                 </div>

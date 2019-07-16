@@ -16,6 +16,7 @@
 }
 
 .section-2-heading {
+    opacity: 0;
     font-family: 'Playfair Display', serif;
     color: #868383;
     letter-spacing: 3px;
@@ -24,7 +25,34 @@
     margin: 0 auto 0 90px;
 }
 
+.animated {
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    pointer-events: all;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fadeInUp25 {
+    -webkit-animation-name: fadeInUp25;
+    animation-name: fadeInUp25;
+}
+
+@keyframes fadeInUp25 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0,25%,0);
+        transform: translate3d(0,25%,0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
 .notify-me-button {
+    opacity: 0;
     margin-left: auto;
     margin-right: 156px;
     background-color: white;
@@ -68,6 +96,24 @@
 
 .notify-me-button:hover::after {
     opacity: 1;
+}
+
+.fadeInUp60 {
+    -webkit-animation-name: fadeInUp60;
+    animation-name: fadeInUp60;
+}
+
+@keyframes fadeInUp60 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0,60%,0);
+        transform: translate3d(0,60%,0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
 }
 
 

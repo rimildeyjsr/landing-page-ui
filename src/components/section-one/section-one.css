@@ -22,6 +22,50 @@
     margin-left: 85px;
 }
 
+.animated {
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    pointer-events: all;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fadeInUp25 {
+    -webkit-animation-name: fadeInUp25;
+    animation-name: fadeInUp25;
+}
+
+@keyframes fadeInUp25 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0,25%,0);
+        transform: translate3d(0,25%,0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInUp60 {
+    -webkit-animation-name: fadeInUp60;
+    animation-name: fadeInUp60;
+}
+
+@keyframes fadeInUp60 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0,60%,0);
+        transform: translate3d(0,60%,0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
 .image-circle {
     position: relative;
     width: 111px;
@@ -62,3 +106,4 @@
 .baseline-img {
     width: 111px;
 }
+
