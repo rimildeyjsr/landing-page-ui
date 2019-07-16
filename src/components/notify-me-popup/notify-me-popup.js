@@ -8,6 +8,10 @@ import { ThemeProvider } from '@material-ui/styles';
 import grey from '@material-ui/core/colors/grey';
 import emailIcon from "../../images/baseline-email.svg";
 import accountIcon from "../../images/baseline-account_circle.svg";
+import firebaseConfig from "../../firebase-config";
+
+const firebase = require("firebase");
+require("firebase/firestore");
 
 const useStyles = theme => ({
   textField: {
@@ -26,6 +30,29 @@ export class NotifyMePopup extends Component {
 
   constructor(props) {
     super(props);
+
+    this.state = {};
+
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+  }
+
+  handleInputFieldChange(event,id) {
+    this.setState({[id]: event.target.value});
+  }
+
+  publishTextChanges(event) {
+    event.preventDefault();
+    let db = firebase.firestore();
+    let self = this;
+    let dbRef = db.collection("submitInfo");
+    dbRef.add({
+        name: self.state.name,
+        email: self.state.email
+    }).then(function(){
+      console.log('data stored in firestore');
+    });
   }
 
   render() {
@@ -47,6 +74,7 @@ export class NotifyMePopup extends Component {
               label="Name"
               className={classes.textField}
               variant="outlined"
+              onChange={(e) => {this.handleInputFieldChange(e,'name')}}
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -63,6 +91,7 @@ export class NotifyMePopup extends Component {
               label="Email"
               className={classes.textField}
               variant="outlined"
+              onChange={(e) => {this.handleInputFieldChange(e,'email')}}
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -78,7 +107,7 @@ export class NotifyMePopup extends Component {
             We will only send out an email once we are ready for launch.
           </div>
 
-          <button className='submit-button'>
+          <button className='submit-button' onClick={this.publishTextChanges.bind(this)}>
             SUBMIT
           </button>
         </div>
