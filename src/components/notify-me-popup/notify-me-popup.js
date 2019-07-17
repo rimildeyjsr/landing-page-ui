@@ -9,6 +9,7 @@ import grey from '@material-ui/core/colors/grey';
 import emailIcon from "../../images/baseline-email.svg";
 import accountIcon from "../../images/baseline-account_circle.svg";
 import firebaseConfig from "../../firebase-config";
+import CircularIndeterminate from "../circular-progress/circularProgress";
 
 const firebase = require("firebase");
 require("firebase/firestore");
@@ -31,7 +32,9 @@ export class NotifyMePopup extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      showUploadProgress: false
+    };
 
     if (!firebase.apps.length) {
       firebase.initializeApp(firebaseConfig);
@@ -43,6 +46,9 @@ export class NotifyMePopup extends Component {
   }
 
   publishTextChanges(event) {
+    this.setState({
+      showUploadProgress: true
+    });
     event.preventDefault();
     let db = firebase.firestore();
     let self = this;
@@ -52,6 +58,10 @@ export class NotifyMePopup extends Component {
         email: self.state.email
     }).then(function(){
       console.log('data stored in firestore');
+      self.setState({
+        showUploadProgress: false
+      });
+      self.props.closeLightBox();
     });
   }
 
@@ -70,8 +80,9 @@ export class NotifyMePopup extends Component {
 
           <ThemeProvider theme={theme}>
             <TextField
+              disabled={this.state.showUploadProgress}
               id="name"
-              label="Name"
+              label='Name'
               className={classes.textField}
               variant="outlined"
               onChange={(e) => {this.handleInputFieldChange(e,'name')}}
@@ -87,6 +98,7 @@ export class NotifyMePopup extends Component {
 
           <ThemeProvider theme={theme}>
             <TextField
+              disabled={this.state.showUploadProgress}
               id="email-msg"
               label="Email"
               className={classes.textField}
@@ -102,12 +114,17 @@ export class NotifyMePopup extends Component {
             />
           </ThemeProvider>
 
+          <CircularIndeterminate showUploadProgress={this.state.showUploadProgress}/>
+
           <div className='disclaimer-text'>
             We promise not to spam you! <br/>
             We will only send out an email once we are ready for launch.
           </div>
 
-          <button className='submit-button' onClick={this.publishTextChanges.bind(this)}>
+          <button
+            disabled={this.state.showUploadProgress}
+            className={this.state.showUploadProgress ? 'submit-button disabled' : 'submit-button'}
+            onClick={this.publishTextChanges.bind(this)}>
             SUBMIT
           </button>
         </div>

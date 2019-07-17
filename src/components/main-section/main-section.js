@@ -65,7 +65,7 @@ export class MainSection extends Component {
                 {
                   this.state.showNotifyMePopup ?
                     <NotifyMePopup
-                      closeLightBox={() => this.toggleLightBoxDisplay()}
+                      closeLightBox={this.toggleLightBoxDisplay.bind(this)}
                     />
                     :
                     null

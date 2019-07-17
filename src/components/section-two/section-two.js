@@ -15,7 +15,8 @@ export class SectionTwo extends Component {
             We’re building an amazing new gaming experience for you.
           </h2>
 
-          <button className={this.props.sectionTwoLoaded ? 'notify-me-button animated fadeInUp60' : 'notify-me-button'} onClick={this.props.showLightBox}>
+          <button
+            className={this.props.sectionTwoLoaded ? 'notify-me-button animated fadeInUp60' : 'notify-me-button'} onClick={this.props.showLightBox}>
             NOTIFY ME
           </button>
         </div>
