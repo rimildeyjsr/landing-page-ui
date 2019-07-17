@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/landing-page-ui/static/css/main.858b74bf.chunk.css",
+    "main.js": "/landing-page-ui/static/js/main.c974ffaf.chunk.js",
+    "main.js.map": "/landing-page-ui/static/js/main.c974ffaf.chunk.js.map",
+    "runtime~main.js": "/landing-page-ui/static/js/runtime~main.0550c504.js",
+    "runtime~main.js.map": "/landing-page-ui/static/js/runtime~main.0550c504.js.map",
+    "static/js/2.8dc0e453.chunk.js": "/landing-page-ui/static/js/2.8dc0e453.chunk.js",
+    "static/js/2.8dc0e453.chunk.js.map": "/landing-page-ui/static/js/2.8dc0e453.chunk.js.map",
+    "index.html": "/landing-page-ui/index.html",
+    "precache-manifest.e6af8d9a4b697584e4fd3a55eb9388cd.js": "/landing-page-ui/precache-manifest.e6af8d9a4b697584e4fd3a55eb9388cd.js",
+    "service-worker.js": "/landing-page-ui/service-worker.js",
+    "static/css/main.858b74bf.chunk.css.map": "/landing-page-ui/static/css/main.858b74bf.chunk.css.map",
+    "static/media/baseline-account_circle.svg": "/landing-page-ui/static/media/baseline-account_circle.f322cb5a.svg",
+    "static/media/baseline-clear.svg": "/landing-page-ui/static/media/baseline-clear.5882f300.svg",
+    "static/media/baseline-email.svg": "/landing-page-ui/static/media/baseline-email.fbd587d1.svg",
+    "static/media/baseline-expand.svg": "/landing-page-ui/static/media/baseline-expand.bb158ab6.svg"
+  }
+}
